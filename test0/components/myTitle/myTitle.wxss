@@ -1,0 +1,42 @@
+.tit {
+  display: flex;
+  /*垂直居中  */
+  align-items: center;
+  padding: 10rpx;
+  background-color: white;
+}
+
+.logo {
+  flex: 7;
+}
+
+.search_tp {
+  flex: 1;
+  display: flex;
+  /*水平居中  */
+  justify-content: center;
+  /*垂直居中  */
+  align-items: center;
+}
+
+.user_tp {
+  flex: 2;
+  display: flex;
+  /*水平居中  */
+  justify-content: center;
+  /*垂直居中  */
+  align-items: center;
+}
+
+.tit_app {
+  flex: 3;
+  font-size: 30rpx;
+  display: flex;
+  /*水平居中  */
+  justify-content: center;
+  /*垂直居中  */
+  align-items: center;
+  background-color: pink;
+  color: white;
+  border-radius: 10rpx;
+}

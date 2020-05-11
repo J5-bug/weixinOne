@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "myTitle":"../../components/myTitle/myTitle"
+  },
+  "navigationBarTitleText": "动漫星城"
+}

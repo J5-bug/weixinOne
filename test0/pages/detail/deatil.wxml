@@ -1,0 +1,54 @@
+<view class="main">
+  <!-- 共用头 -->
+  <myTitle></myTitle>
+  <!-- 视频详情 -->
+  <view class="video_info">
+    <video src="https://www.w3school.com.cn/example/html5/mov_bbb.mp4" controls> </video>
+    <view class="video_title">
+      {{videoINfo.title}}
+    </view>
+    <view class="video_ttt">
+      作者：{{videoINfo.owner.name}} 播放量：{{videoINfo.owner.mid}}
+    </view>
+    <view style="display: flex;">
+      <view class="video_tx">
+        <image mode="widthFix" src="{{videoINfo.owner.face}}"></image>
+      </view>
+      <view class="video_text">
+        {{videoINfo.desc}}
+      </view>
+    </view>
+  </view>
+  <!-- 视频详情 end -->
+  <!-- 评论 -->
+  <view class="comment_wrap">
+    <view class="comment_tit">
+      评论（ {{commentList.length}} ）
+    </view>
+    <view class="comment_list">
+      <view class="comment_item" wx:for="{{commentList}}" wx:key="*this">
+        <!-- 头像 -->
+        <view class="comment_tx">
+          <image mode="widthFix" src="{{item.userIconSrc}}"></image>
+        </view>
+
+        <!-- 信息 -->
+        <view class="comment_r">
+          <view class="comment_name">
+            <text>{{item.username}}</text>
+          </view>
+          <view class="comment_info">
+            <text>{{item.commentInfo}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view style="height: 110rpx;"></view>
+
+  <!-- 评论end -->
+  <view class="inp_bj">
+    <input class="inp"  type="text"  focus="true" bindinput="goodstxt" placeholder="发表你的评论"></input>
+    <button class="inp_btn" bindtap="clickButton"> 发送</button>
+  </view>
+</view>
